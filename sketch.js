@@ -1,16 +1,18 @@
-let count;
-let b = []
+let b = [];
+
 function setup() {
   createCanvas(400, 400);
-  count = 1;
-  for(i=0; i<5; i++){
-     b.push(new Box(10+i*55,200, 50,50,"x","#2196F3"));
-  }//end loop
-}//end setup
-
+  for(var i =0; i<5 ; i++){
+    b.push(new Box(10 + i*55,100,50,50, ""));  
+  }
+}
 function draw() {
   background(220);
-  for(i=0; i<5; i++){
-    b[i].display()
-  }//end loop
-}//end draw
+  for(var i =0; i<5 ; i++){
+     b[i].display();
+  }
+}
+function keyReleased(){
+  b[0].letter = key
+  console.log(key)
+}//end keyReleasedf
